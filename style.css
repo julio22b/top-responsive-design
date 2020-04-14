@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* header section */
+.header {
+  min-height: 8vh;
+}
+
+.header .top {
+  width: 100%;
+  padding: 1em 0;
+  background-color: #131313;
+}
+
+.header nav {
+  padding: 1em 0;
+  background-color: #ffffff;
+}
+
+.header p {
+  padding: 1em 0;
+  background-color: #ffdd33;
+}
+
+/* BIG PICTURES INTRO SECTION*/
+.intro {
+  min-height: 75vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template: 1fr 1fr/ 2fr 1fr;
+}
+
+.intro .figure1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / span 2;
+  -ms-grid-column: 1;
+  grid-column: 1/1;
+  background-color: lightblue;
+}
+
+.intro .figure2 {
+  -ms-grid-row: 1;
+  grid-row: 1/1;
+  background-color: lightseagreen;
+}
+
+.intro .figure3 {
+  -ms-grid-row: 2;
+  grid-row: 2/2;
+  background-color: lightpink;
+}
+
+/* LATEST NEWS SECTION */
+.latest-news {
+  height: 75vh;
+  background-color: lightcyan;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  padding: 2em 0;
+}
+
+.latest-news h2 {
+  width: 100%;
+  height: 5vh;
+  margin: 1em;
+  background-color: lightseagreen;
+}
+
+.latest-news figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 23%;
+  height: 35%;
+  background-color: lightseagreen;
+}
+
+.latest-news figure img {
+  width: 100%;
+  background-color: lightpink;
+}
+
+.latest-news figure p {
+  background-color: gray;
+}
+
+/* LATEST FUNDING ROUNDS ON INDEX.CO */
+.latest-funding {
+  background-color: lightpink;
+  height: 50vh;
+  padding: 2em 0;
+  width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.latest-funding > div {
+  width: 100%;
+  padding: 1em 0;
+  background-color: lightseagreen;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.latest-funding article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 23%;
+  height: 50%;
+  background-color: lightseagreen;
+}
+
+/* ARTICLES ON DIFFERET TOPICS */
+.various-topics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80%;
+  padding: 2em 0;
+  margin: 0 auto;
+  background-color: lightcyan;
+}
+
+.various-topics article {
+  width: 32%;
+  height: 80vh;
+  margin-bottom: 2em;
+  background-color: lightseagreen;
+}
+
+.various-topics article:last-child {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.latest-deals {
+  background-color: lightpink;
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  padding: 2em 0;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.latest-deals header {
+  background-color: lightseagreen;
+  width: 100%;
+  padding: 1em;
+}
+
+.latest-deals article {
+  width: 23%;
+  height: 40%;
+  background-color: lightseagreen;
+}
+
+footer ul {
+  background-color: #131313;
+  padding: 1em 0;
+}
+
+footer p {
+  padding: 3em 0;
+  background-color: black;
+  width: 100%;
+}
+/*# sourceMappingURL=style.css.map */
