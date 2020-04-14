@@ -26,6 +26,12 @@
   background-color: #ffdd33;
 }
 
+@media screen and (max-width: 760px) {
+  .top {
+    display: none;
+  }
+}
+
 /* BIG PICTURES INTRO SECTION*/
 .intro {
   min-height: 75vh;
@@ -55,6 +61,22 @@
   -ms-grid-row: 2;
   grid-row: 2/2;
   background-color: lightpink;
+}
+
+@media screen and (max-width: 760px) {
+  .intro {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .intro figure {
+    width: 100%;
+    height: 25vh;
+  }
 }
 
 /* LATEST NEWS SECTION */
@@ -105,6 +127,25 @@
   background-color: gray;
 }
 
+@media screen and (max-width: 760px) {
+  .latest-news {
+    height: 120vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 95%;
+  }
+  .latest-news h2 {
+    margin: 1em 0;
+  }
+  .latest-news figure {
+    height: 7%;
+    width: 100%;
+    margin-bottom: 2em;
+  }
+}
+
 /* LATEST FUNDING ROUNDS ON INDEX.CO */
 .latest-funding {
   background-color: lightpink;
@@ -147,6 +188,21 @@
   background-color: lightseagreen;
 }
 
+@media screen and (max-width: 760px) {
+  .latest-funding {
+    width: 95%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 120vh;
+  }
+  .latest-funding article {
+    height: 20%;
+    width: 100%;
+  }
+}
+
 /* ARTICLES ON DIFFERET TOPICS */
 .various-topics {
   display: -webkit-box;
@@ -175,6 +231,28 @@
       align-self: flex-start;
 }
 
+@media screen and (max-width: 1000px) {
+  .various-topics article {
+    width: 48%;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .various-topics {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 95%;
+    height: auto;
+  }
+  .various-topics article {
+    width: 100%;
+    height: 90vh;
+  }
+}
+
+/* LATEST DEALS SECTION */
 .latest-deals {
   background-color: lightpink;
   height: 80vh;
@@ -203,6 +281,23 @@
   width: 23%;
   height: 40%;
   background-color: lightseagreen;
+}
+
+@media screen and (max-width: 760px) {
+  .latest-deals {
+    width: 95%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .latest-deals .header {
+    padding: 0;
+  }
+  .latest-deals article {
+    height: 10%;
+    width: 100%;
+  }
 }
 
 footer ul {
