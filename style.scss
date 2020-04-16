@@ -580,13 +580,16 @@ $orange-letter: #ff4422;
             figcaption {
                 padding: 0.6em;
                 color: $orange-letter;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
                 p:first-child {
                     font-size: 0.7rem;
                     margin: 0 1em;
                 }
                 p:last-child {
                     font-weight: bold;
-                    font-size: 1em;
+                    font-size: 0.8em;
                     margin: 0 0.5em 0.5em 0.5em;
                 }
             }

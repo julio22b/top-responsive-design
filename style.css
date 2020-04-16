@@ -754,6 +754,16 @@
 .various-topics article .latest-figure figcaption {
   padding: 0.6em;
   color: #ff4422;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .various-topics article .latest-figure figcaption p:first-child {
@@ -763,7 +773,7 @@
 
 .various-topics article .latest-figure figcaption p:last-child {
   font-weight: bold;
-  font-size: 1em;
+  font-size: 0.8em;
   margin: 0 0.5em 0.5em 0.5em;
 }
 
