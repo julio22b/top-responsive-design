@@ -69,6 +69,7 @@
 }
 
 .header nav {
+  letter-spacing: 1px;
   background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
