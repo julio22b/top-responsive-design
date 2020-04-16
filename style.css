@@ -8,6 +8,10 @@
 /* header section */
 .header {
   min-height: 8vh;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 30;
 }
 
 .header .top {
@@ -74,32 +78,56 @@
           justify-content: space-between;
 }
 
+.header nav .tnw-red {
+  display: none;
+}
+
 .header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   list-style: none;
-  width: 50%;
+  width: 80%;
 }
 
 .header nav ul li {
   padding: 1.3em 0;
+  margin: 0 1em;
   color: #9b9b9b;
   font-size: 0.8rem;
 }
 
-.header nav button {
+.header nav .buttons-container {
+  min-width: 60px;
   width: 4%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header nav .buttons-container button {
+  width: 4%;
+  min-width: 60px;
   background: url("./img/iconmonstr-magnifier-6-32(1).png") 20% 10% no-repeat;
   background-position: center;
+  background-size: 25% 35%;
   border: none;
   border-left: 1px solid #e0e0e0;
   background-color: white;
+}
+
+.header nav .buttons-container button.menu {
+  background: url("./img/iconmonstr-menu-1-24.png");
+  background-repeat: no-repeat;
+  background-size: 35% 35%;
+  background-position: center;
+  display: none;
 }
 
 .header p {
@@ -109,9 +137,31 @@
   font-size: 0.8rem;
 }
 
-@media screen and (max-width: 760px) {
-  .top {
+@media screen and (max-width: 1100px) {
+  .header .hide {
     display: none;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .header nav {
+    height: 7vh;
+  }
+  .header .top {
+    display: none;
+  }
+  .header nav .tnw-red {
+    display: inline;
+  }
+  .header nav ul li {
+    display: none;
+  }
+  .header nav .buttons-container {
+    min-width: 120px;
+    width: 8%;
+  }
+  .header nav .buttons-container button.menu {
+    display: block;
   }
 }
 
@@ -237,6 +287,12 @@
   .intro figure {
     width: 100%;
     height: 25vh;
+  }
+  .intro figure span {
+    display: none;
+  }
+  .intro figure figcaption h2 {
+    font-size: 1.2rem !important;
   }
 }
 
@@ -551,18 +607,33 @@
   .latest-funding {
     padding-top: 0;
   }
+  .latest-funding > div h2 {
+    font-size: 1.5rem;
+  }
+  .latest-funding > div ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .latest-funding > div ul li {
+    border: none;
+    padding: 0;
+    margin: 0.4em 0;
+    font-size: 0.9rem;
+  }
   .latest-funding article {
     width: 100%;
     margin-bottom: 0.7em;
   }
   .latest-funding article h4 {
-    padding-left: 14%;
+    padding-left: 17%;
   }
   .latest-funding article div p {
-    padding-left: 14%;
+    padding-left: 17%;
   }
   .latest-funding article img {
-    width: 10%;
+    width: 13%;
     top: 5%;
     left: 2%;
   }
@@ -738,6 +809,9 @@
   .various-topics article {
     width: 100%;
   }
+  .various-topics article h2 {
+    margin-top: 0;
+  }
 }
 
 /* LATEST DEALS SECTION */
@@ -853,15 +927,117 @@
   }
 }
 
+/* FOOTER */
 footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #131313;
   padding: 1em 0;
 }
 
+footer .socials {
+  min-height: 8vh;
+  padding-top: 3.5em;
+}
+
+footer .socials li {
+  margin-right: 1.5em;
+}
+
+footer .socials li a {
+  padding: 0.8em;
+  border-radius: 50%;
+  background-color: #333333;
+  border: 1px solid #333333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .socials li a:hover {
+  background-color: #131313;
+}
+
+footer .socials li a img {
+  width: 19px;
+  height: 19px;
+}
+
+footer .socials li:last-child {
+  margin: 0;
+}
+
+footer .others li {
+  margin: 0 1em;
+  font-size: 0.7rem;
+  padding-bottom: 1.5em;
+}
+
+footer .others li a {
+  color: #a4a4a4;
+  text-decoration: none;
+}
+
 footer p {
   padding: 3em 0;
+  font-size: 0.8rem;
   background-color: black;
   width: 100%;
+  color: #a4a4a4;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer p img {
+  margin: 0 1em;
+}
+
+@media screen and (max-width: 750px) {
+  footer .socials li {
+    margin-right: 1em;
+  }
+  footer .socials li a img {
+    width: 13px;
+    height: 13px;
+  }
+  footer > p img {
+    margin: 0 0.5em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  footer .socials li {
+    margin-right: 0.4em;
+  }
+  footer .socials li a img {
+    width: 11px;
+    height: 11px;
+  }
+  footer .others li {
+    margin: 0 0.4em;
+  }
 }
 
 /* ORANGE ARROW TO THE RIGHT OF HEADINGS */
