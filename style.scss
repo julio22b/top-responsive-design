@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 $gray-letter: #9b9b9b;
 $orange-letter: #ff4422;
@@ -554,35 +555,39 @@ $orange-letter: #ff4422;
         }
         .latest-figure {
             width: 100%;
+            height: 125px;
+            max-height: 145px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             background-color: #fff4f2;
+            overflow: hidden;
             div {
                 order: 1;
                 min-width: 30%;
                 max-width: 35%;
-                height: 97px;
+                height: 120px;
                 overflow: hidden;
                 display: flex;
                 align-items: flex-end;
                 img {
-                    height: 95%;
+                    height: 120px;
                     width: 160%;
-                    margin-left: -30%;
+                    margin: 0 -30%;
                 }
             }
 
             figcaption {
                 padding: 0.6em;
                 color: $orange-letter;
-                height: 13vh;
                 p:first-child {
                     font-size: 0.7rem;
+                    margin: 0 1em;
                 }
                 p:last-child {
                     font-weight: bold;
                     font-size: 1em;
+                    margin: 0 0.5em 0.5em 0.5em;
                 }
             }
         }
@@ -620,6 +625,9 @@ $orange-letter: #ff4422;
 @media screen and (max-width: 1000px) {
     .various-topics article {
         width: 48%;
+        .latest-figure p:last-child {
+            font-size: 0.9rem;
+        }
     }
 }
 
